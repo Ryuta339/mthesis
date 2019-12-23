@@ -165,8 +165,8 @@
 %% English/Japanese %%%%%
 %\def\thebibliography#1{\chapter*{References \@mkboth
 % {References}{References}}\list
-\def\thebibliography#1{\chapter*{参考文献\@mkboth
- {参 考 文 献}{参 考 文 献}}\list
+\def\thebibliography#1{\chapter*{References\@mkboth
+ {References}{References}}\list
 %
   {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
   \advance\leftmargin\labelsep
@@ -233,7 +233,7 @@
 {
 	\thispagestyle{empty}
 	\Large
-	\begin{center} \textbf{修士論文} \\
+	\begin{center} \textbf{Master's Thesis} \\
     \vspace{30mm} \ \\
 		{\Huge
       \begin{tabular}{c}
@@ -249,18 +249,16 @@
 
 	%\vspace{40mm}
 	\vfill
-		東京工業大学\\
-		\@所属学院 \\
-		\@所属コース
+		Graduate Major in \@所属コース \\
+		School of \@所属学院 \\
+		Tokyo Institute of Technology
 
 	%\vspace{40mm}
 	\vfill
-    \begin{tabular}{rl}
-      指導教員            &\@指導教員名A\\
-      副指導教員          &\@指導教員名B\\
+		Supervisor: \@指導教員名A\\
+      %副指導教員 \@指導教員名B\\
       %       &\@副指導教員名&\@副職名\\
       %       &\@副副指導教員名&\@副副職名
-    \end{tabular}
 
 		%\vspace{40mm}
 		\vfill
@@ -276,9 +274,9 @@
  %\@年度\hspace{1zw}学士論文内容梗概
 \end{flushleft}
 \begin{center}
-	{\large \textbf{  概要}}
+	{\large \textbf{Abstract}}
 \end{center}
-	\addchapter{概要}
+	\addchapter{Abstract}
  
 \@概要
 \thispagestyle{empty}
@@ -299,8 +297,8 @@
 % \def\fnum@figure{{\bf Fig. \thefigure}}        % deleted by saibara
 % \def\fnum@table{\sc Table \thetable}           % deleted by saibara
 % 日本語が好きな人は下の方を使用してください。 by saibara
-\def\fnum@figure{図 \thefigure}   % changed by saibara
-\def\fnum@table{\sc 表 \thetable}       % changed by saibara
+% \def\fnum@figure{図 \thefigure}   % changed by saibara
+% \def\fnum@table{\sc 表 \thetable}       % changed by saibara
 \captionsetup[figure]{format=plain, labelformat=simple, labelsep=space, font=footnotesize}
 \captionsetup[table]{format=plain, labelformat=simple, labelsep=space, font={sc, footnotesize}}
 
@@ -311,8 +309,8 @@
 %%      章番号位置の調整                by rui
 %%
 %% English/Japanese %%%%%
-%\def\@chapapp#1{Chapter #1}
-\def\@chapapp#1{第#1章}     
+\def\@chapapp#1{Chapter #1}
+%\def\@chapapp#1{第#1章}     
 
 
 \def\@makechapterhead#1{ \vspace*{\lineheight} { \parindent 0pt \raggedright
@@ -332,8 +330,8 @@
   \setcounter{chapter}{0}
   \setcounter{section}{0}
 %% English/Japanese %%%%%
-%  \def\@chapapp{Appendix }
-  \def\@chapapp{付録 }
+  \def\@chapapp{Appendix }
+%  \def\@chapapp{付録 }
   \def\thechapter{\Alph{chapter}}
 }
 
@@ -343,8 +341,8 @@
 
 %% English/Japanese %%%%%
 %% Contents/目次
-%\renewcommand{\contentsname}{Contents}
-\renewcommand{\contentsname}{目\quad 次}
+\renewcommand{\contentsname}{Contents}
+%\renewcommand{\contentsname}{目\quad 次}
 
 \def\@pnumwidth{3em}
 \def\chapter{\newpage \thispagestyle{plain} \global\@topnum\z@
@@ -448,14 +446,14 @@
 \newcommand{\pend}{\hfill\qed}
 \newcommand{\bsquare}{\hbox{\rule{6pt}{6pt}}}%Proof End in Black!
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\newtheorem{df}{定義}[chapter]
-\newtheorem{pr}{命題}[chapter]
-\newtheorem{theo}{定理}[chapter]
+\newtheorem{df}{Definition}[chapter]
+\newtheorem{pr}{Proposition}[chapter]
+\newtheorem{theo}{Theorem}[chapter]
 \newtheorem{col}{系}[chapter]
-\newtheorem{lem}{補題}[chapter]
+\newtheorem{lem}{Lemma}[chapter]
 \newtheorem{pot}{ \small \it proof}
 \newtheorem{pol}[lem]{\small \it proof}
-\newtheorem{ex}{例}
+\newtheorem{ex}{Example}
 %\newfont{\bg}{cmr10 scaled\magstep4}
 \newcommand{\bigzerou}{\smash{\hbox{0}}}
 %\newcommand{\bigzerou}{\smash{\lower1.7ex\hbox{\bg 0}}}
