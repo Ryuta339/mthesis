@@ -247,12 +247,14 @@
 	\@学籍番号
 
 
-	\vspace{40mm}
+	%\vspace{40mm}
+	\vfill
 		東京工業大学\\
 		\@所属学院 \\
 		\@所属コース
 
-	\vspace{40mm}
+	%\vspace{40mm}
+	\vfill
     \begin{tabular}{rl}
       指導教員            &\@指導教員名A\\
       副指導教員          &\@指導教員名B\\
@@ -260,7 +262,8 @@
       %       &\@副副指導教員名&\@副副職名
     \end{tabular}
 
-		\vspace{40mm}
+		%\vspace{40mm}
+		\vfill
 		{\large \@提出年月}
     
 \end{center}}
@@ -433,12 +436,12 @@
 \makeatletter
 	\renewcommand{\theequation}{%
 	\thechapter.\arabic{equation}}
-	\@addtoreset{equation}{section}
+	\@addtoreset{equation}{chapter}
 	\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
-	\@addtoreset{figure}{section}
+	\@addtoreset{figure}{chapter}
 	\renewcommand{\thetable}{%
 		\thechapter.\arabic{table}}
-		\@addtoreset{table}{section}
+		\@addtoreset{table}{chapter}
 \makeatother
 %\newcommand{\defeq}{\stackrel{\rm def}{=}}%定義command
 \newcommand{\qed}{\hbox{\rule[-2pt]{3pt}{6pt}}}%Proof End!
