@@ -1,4 +1,4 @@
-\documentclass[a4j,10pt,onecolumn,oneside,final,dvipdfmx]{jreport}
+\documentclass[a4j,11pt,onecolumn,oneside,final,dvipdfmx]{jreport}
 
 %\usepackage{gthesis}
 \usepackage{caption}
@@ -6,9 +6,10 @@
 
 \usepackage{amsmath,amsthm,amssymb,ascmac}
 \usepackage{nccmath}
+\usepackage{hyperref}
+\usepackage{pxjahyper}
 \usepackage{fancybox}
 \usepackage{slashbox}
-%\usepackage[dviout]{color,graphics}
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage[top=20truemm,bottom=20truemm]{geometry}
@@ -19,6 +20,15 @@
 \usepackage{wrapfig}
 \usepackage{ulem}
 \usepackage{here}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	citecolor=blue,
+	urlcolor=cyan,
+}
+
 
 %\makeatletter
 %\def\@cite#1{\textsuperscript{#1)}}
@@ -58,15 +68,17 @@
 \maketitle
 % ----------------------------------------------------------------------
 % 目次
-\setcounter{page}{1}
-%\renewcommand{\thepage}{\roman{page}}
-\renewcommand{\thepage}{\arabic{page}}  %% いる？
+\setcounter{page}{3}
+\renewcommand{\thepage}{\roman{page}}
+%\renewcommand{\thepage}{\arabic{page}}  %% いる？
 \setcounter{tocdepth}{1}
 \tableofcontents
+\listoffigures
+\listoftables
 \clearpage
 % ----------------------------------------------------------------------
 % 内容
-%\setcounter{page}{1}
+\setcounter{page}{1}
 \renewcommand{\thepage}{\arabic{page}}
 \input{introduction}
 %\input{body-a}
